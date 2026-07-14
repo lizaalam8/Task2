@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FlyHigh Airways | Ticket Management</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/tailwind.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo px-6 py-6 flex items-center gap-3">
+    <div class="w-10 h-10 rounded-xl bg-sky-500 flex items-center justify-center">
+      <i class="fa-solid fa-plane-up text-white text-lg"></i>
+    </div>
+    <div>
+      <p class="font-display text-white text-lg font-semibold leading-tight">FlyHigh</p>
+      <p class="text-[11px] text-sky-200 tracking-wide">AIRLINE OPERATIONS</p>
+    </div>
+  </div>
+
+  <nav class="mt-4 flex flex-col gap-1 px-3">
+    <a href="index.html" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium">
+      <i class="fa-solid fa-gauge-high"></i> Home Dashboard
+    </a>
+    <a href="tickets.html" class="nav-link active flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium">
+      <i class="fa-solid fa-ticket"></i> Ticket Management
+    </a>
+    <a href="departures.html" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium">
+      <i class="fa-solid fa-plane-departure"></i> Departures
+    </a>
+    <a href="arrivals.html" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium">
+      <i class="fa-solid fa-plane-arrival"></i> Arrivals
+    </a>
+
+    <p class="text-[11px] text-sky-300/70 tracking-wide px-4 mt-6 mb-1">SYSTEM</p>
+    <a href="#" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium">
+      <i class="fa-solid fa-gear"></i> Settings
+    </a>
+    <a href="#" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium">
+      <i class="fa-solid fa-right-from-bracket"></i> Sign Out
+    </a>
+  </nav>
+</aside>
+
+<div class="main-content flex flex-col min-h-screen">
+
+  <header class="bg-white border-b border-sky-100 px-6 py-4 flex items-center justify-between sticky top-0 z-30">
+    <div class="flex items-center gap-4">
+      <label for="nav-toggle" class="lg:hidden text-navy text-xl cursor-pointer">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+      <div>
+        <h1 class="font-display text-xl font-semibold text-navy">Ticket Management</h1>
+        <p class="text-sm text-slate-500">Search, issue and track passenger bookings</p>
+      </div>
+    </div>
+    <button class="btn-primary flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium">
+      <i class="fa-solid fa-plus"></i> New Ticket
+    </button>
+  </header>
+
+  <main class="flex-1 px-6 py-6">
+
+    <section class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+      <div class="stat-card p-5 flex items-center gap-4">
+        <div class="stat-icon bg-sky-100 text-sky-600"><i class="fa-solid fa-ticket text-lg"></i></div>
+        <div>
+          <p class="text-sm text-slate-500">Total Tickets</p>
+          <p class="font-display text-2xl font-semibold text-navy">1,248</p>
+        </div>
+      </div>
+      <div class="stat-card p-5 flex items-center gap-4">
+        <div class="stat-icon bg-emerald-100 text-emerald-600"><i class="fa-solid fa-circle-check text-lg"></i></div>
+        <div>
+          <p class="text-sm text-slate-500">Confirmed</p>
+          <p class="font-display text-2xl font-semibold text-navy">1,046</p>
+        </div>
+      </div>
+      <div class="stat-card p-5 flex items-center gap-4">
+        <div class="stat-icon bg-amber-100 text-amber-600"><i class="fa-solid fa-hourglass-half text-lg"></i></div>
+        <div>
+          <p class="text-sm text-slate-500">Pending or Cancelled</p>
+          <p class="font-display text-2xl font-semibold text-navy">202</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel p-5 mt-6">
+      <div class="flex flex-col lg:flex-row lg:items-center gap-3 justify-between mb-5">
+        <div class="flex items-center bg-sky-50 rounded-lg px-3 py-2 gap-2 w-full lg:w-80">
+          <i class="fa-solid fa-magnifying-glass text-sky-600 text-sm"></i>
+          <input type="text" placeholder="Search by passenger or flight no." class="bg-transparent outline-none text-sm w-full">
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <select class="border border-sky-100 rounded-lg text-sm px-3 py-2 text-slate-600 outline-none">
+            <option>All Status</option>
+            <option>Confirmed</option>
+            <option>Pending</option>
+            <option>Cancelled</option>
+          </select>
+          <select class="border border-sky-100 rounded-lg text-sm px-3 py-2 text-slate-600 outline-none">
+            <option>All Classes</option>
+            <option>Economy</option>
+            <option>Business</option>
+            <option>First</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="data-table w-full">
+          <thead>
+            <tr>
+              <th class="rounded-l-lg">Ticket ID</th>
+              <th>Passenger</th>
+              <th>Flight</th>
+              <th>Route</th>
+              <th>Seat</th>
+              <th>Class</th>
+              <th>Fare</th>
+              <th>Status</th>
+              <th class="rounded-r-lg text-right pr-4">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="font-mono-board text-xs text-slate-500">TCK-10231</td>
+              <td class="font-medium text-navy">Passenger1</td>
+              <td>PK-305</td>
+              <td>ISB &rarr; DXB</td>
+              <td>4A</td>
+              <td>Business</td>
+              <td>PKR 84,500</td>
+              <td><span class="badge badge-confirmed">Confirmed</span></td>
+              <td class="text-right pr-2">
+                <button class="icon-btn text-sky-600"><i class="fa-solid fa-pen"></i></button>
+                <button class="icon-btn text-red-500"><i class="fa-solid fa-xmark"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td class="font-mono-board text-xs text-slate-500">TCK-10232</td>
+              <td class="font-medium text-navy">Passenger2</td>
+              <td>EK-624</td>
+              <td>ISB &rarr; JED</td>
+              <td>21C</td>
+              <td>Economy</td>
+              <td>PKR 61,200</td>
+              <td><span class="badge badge-pending">Pending</span></td>
+              <td class="text-right pr-2">
+                <button class="icon-btn text-sky-600"><i class="fa-solid fa-pen"></i></button>
+                <button class="icon-btn text-red-500"><i class="fa-solid fa-xmark"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td class="font-mono-board text-xs text-slate-500">TCK-10233</td>
+              <td class="font-medium text-navy">Passenger3</td>
+              <td>QR-611</td>
+              <td>ISB &rarr; DOH</td>
+              <td>14F</td>
+              <td>Economy</td>
+              <td>PKR 58,900</td>
+              <td><span class="badge badge-confirmed">Confirmed</span></td>
+              <td class="text-right pr-2">
+                <button class="icon-btn text-sky-600"><i class="fa-solid fa-pen"></i></button>
+                <button class="icon-btn text-red-500"><i class="fa-solid fa-xmark"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td class="font-mono-board text-xs text-slate-500">TCK-10234</td>
+              <td class="font-medium text-navy">Passenger4</td>
+              <td>PK-786</td>
+              <td>ISB &rarr; LHE</td>
+              <td>9B</td>
+              <td>Economy</td>
+              <td>PKR 14,300</td>
+              <td><span class="badge badge-cancelled">Cancelled</span></td>
+              <td class="text-right pr-2">
+                <button class="icon-btn text-sky-600"><i class="fa-solid fa-pen"></i></button>
+                <button class="icon-btn text-red-500"><i class="fa-solid fa-xmark"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td class="font-mono-board text-xs text-slate-500">TCK-10235</td>
+              <td class="font-medium text-navy">Passenger6</td>
+              <td>TK-716</td>
+              <td>ISB &rarr; IST</td>
+              <td>2A</td>
+              <td>Business</td>
+              <td>PKR 96,750</td>
+              <td><span class="badge badge-confirmed">Confirmed</span></td>
+              <td class="text-right pr-2">
+                <button class="icon-btn text-sky-600"><i class="fa-solid fa-pen"></i></button>
+                <button class="icon-btn text-red-500"><i class="fa-solid fa-xmark"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td class="font-mono-board text-xs text-slate-500">TCK-10236</td>
+              <td class="font-medium text-navy">Passenger17</td>
+              <td>PA-402</td>
+              <td>ISB &rarr; KHI</td>
+              <td>18D</td>
+              <td>Economy</td>
+              <td>PKR 13,900</td>
+              <td><span class="badge badge-pending">Pending</span></td>
+              <td class="text-right pr-2">
+                <button class="icon-btn text-sky-600"><i class="fa-solid fa-pen"></i></button>
+                <button class="icon-btn text-red-500"><i class="fa-solid fa-xmark"></i></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="flex items-center justify-between mt-5 text-sm text-slate-500">
+        <p>Showing 6 of 1,248 tickets</p>
+        <div class="flex gap-2">
+          <button class="w-8 h-8 rounded-lg border border-sky-100 hover:bg-sky-50"><i class="fa-solid fa-chevron-left text-xs"></i></button>
+          <button class="w-8 h-8 rounded-lg bg-sky-500 text-white">1</button>
+          <button class="w-8 h-8 rounded-lg border border-sky-100 hover:bg-sky-50">2</button>
+          <button class="w-8 h-8 rounded-lg border border-sky-100 hover:bg-sky-50">3</button>
+          <button class="w-8 h-8 rounded-lg border border-sky-100 hover:bg-sky-50"><i class="fa-solid fa-chevron-right text-xs"></i></button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer mt-auto">
+    <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <div class="flex items-center gap-2 mb-3">
+          <i class="fa-solid fa-plane-up text-sky-400 text-xl"></i>
+          <span class="font-display text-white text-lg font-semibold">FlyHigh</span>
+        </div>
+        <p class="text-sm text-sky-200/80 leading-relaxed">Internal operations console for managing tickets, gates and flight movements across the network.</p>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-3 text-sm">Navigate</p>
+        <ul class="flex flex-col gap-2 text-sm">
+          <li><a href="index.html">Home Dashboard</a></li>
+          <li><a href="tickets.html">Ticket Management</a></li>
+          <li><a href="departures.html">Departures</a></li>
+          <li><a href="arrivals.html">Arrivals</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-3 text-sm">Operations</p>
+        <ul class="flex flex-col gap-2 text-sm">
+          <li><a href="#">Gate Allocation</a></li>
+          <li><a href="#">Crew Scheduling</a></li>
+          <li><a href="#">Baggage Tracking</a></li>
+          <li><a href="#">Reports</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-3 text-sm">Contact</p>
+        <p class="text-sm text-sky-200/80">Ops Desk, Islamabad International Airport</p>
+        <p class="text-sm text-sky-200/80 mt-1">ops@flyhighairways.com</p>
+        <div class="flex gap-3 mt-4">
+          <a href="#" class="footer-social"><i class="fa-brands fa-twitter text-sm"></i></a>
+          <a href="#" class="footer-social"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+          <a href="#" class="footer-social"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10 py-4 text-center text-xs text-sky-200/70">
+      &copy; 2026 FlyHigh Airways. Built for Task 2 submission.
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>

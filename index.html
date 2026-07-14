@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FlyHigh Airways | Dashboard</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/tailwind.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo px-6 py-6 flex items-center gap-3">
+    <div class="w-10 h-10 rounded-xl bg-sky-500 flex items-center justify-center">
+      <i class="fa-solid fa-plane-up text-white text-lg"></i>
+    </div>
+    <div>
+      <p class="font-display text-white text-lg font-semibold leading-tight">FlyHigh</p>
+      <p class="text-[11px] text-sky-200 tracking-wide">AIRLINE OPERATIONS</p>
+    </div>
+  </div>
+
+  <nav class="mt-4 flex flex-col gap-1 px-3">
+    <a href="index.html" class="nav-link active flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium">
+      <i class="fa-solid fa-gauge-high"></i> Home Dashboard
+    </a>
+    <a href="tickets.html" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium">
+      <i class="fa-solid fa-ticket"></i> Ticket Management
+    </a>
+    <a href="departures.html" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium">
+      <i class="fa-solid fa-plane-departure"></i> Departures
+    </a>
+    <a href="arrivals.html" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium">
+      <i class="fa-solid fa-plane-arrival"></i> Arrivals
+    </a>
+
+    <p class="text-[11px] text-sky-300/70 tracking-wide px-4 mt-6 mb-1">SYSTEM</p>
+    <a href="#" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium">
+      <i class="fa-solid fa-gear"></i> Settings
+    </a>
+    <a href="#" class="nav-link flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium">
+      <i class="fa-solid fa-right-from-bracket"></i> Sign Out
+    </a>
+  </nav>
+</aside>
+
+<div class="main-content flex flex-col min-h-screen">
+
+  <header class="bg-white border-b border-sky-100 px-6 py-4 flex items-center justify-between sticky top-0 z-30">
+    <div class="flex items-center gap-4">
+      <label for="nav-toggle" class="lg:hidden text-navy text-xl cursor-pointer">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+      <div>
+        <h1 class="font-display text-xl font-semibold text-navy">Dashboard Overview</h1>
+        <p class="text-sm text-slate-500">Tuesday, 14 July 2026</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1 px-6 py-6">
+
+    <section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
+      <div class="stat-card p-5 flex items-start justify-between">
+        <div>
+          <p class="text-sm text-slate-500">Total Flights Today</p>
+          <p class="font-display text-3xl font-semibold text-navy mt-1">24</p>
+        </div>
+        <div class="stat-icon bg-sky-100 text-sky-600"><i class="fa-solid fa-plane text-lg"></i></div>
+      </div>
+
+      <div class="stat-card p-5 flex items-start justify-between">
+        <div>
+          <p class="text-sm text-slate-500">Active Tickets</p>
+          <p class="font-display text-3xl font-semibold text-navy mt-1">1,248</p>
+        </div>
+        <div class="stat-icon bg-amber-100 text-amber-600"><i class="fa-solid fa-ticket text-lg"></i></div>
+      </div>
+
+      <div class="stat-card p-5 flex items-start justify-between">
+        <div>
+          <p class="text-sm text-slate-500">On-Time Departures</p>
+          <p class="font-display text-3xl font-semibold text-navy mt-1">91%</p>
+        </div>
+        <div class="stat-icon bg-emerald-100 text-emerald-600"><i class="fa-solid fa-clock text-lg"></i></div>
+      </div>
+
+      <div class="stat-card p-5 flex items-start justify-between">
+        <div>
+          <p class="text-sm text-slate-500">Passengers Checked In</p>
+          <p class="font-display text-3xl font-semibold text-navy mt-1">3,412</p>
+        </div>
+        <div class="stat-icon bg-indigo-100 text-indigo-600"><i class="fa-solid fa-users text-lg"></i></div>
+      </div>
+    </section>
+
+    <section class="panel p-5 mt-6">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="font-display text-lg font-semibold text-navy">Recent Bookings</h2>
+        <a href="tickets.html" class="text-sm text-sky-600 font-medium hover:underline">View all</a>
+      </div>
+      <table class="data-table w-full">
+        <thead>
+          <tr>
+            <th class="rounded-l-lg">Passenger</th>
+            <th>Flight</th>
+            <th>Route</th>
+            <th>Class</th>
+            <th class="rounded-r-lg">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="font-medium text-navy">Passenger 1</td>
+            <td>PK-305</td>
+            <td>ISB &rarr; DXB</td>
+            <td>Business</td>
+            <td><span class="badge badge-confirmed">Confirmed</span></td>
+          </tr>
+          <tr>
+            <td class="font-medium text-navy">Passenger 2</td>
+            <td>EK-624</td>
+            <td>ISB &rarr; JED</td>
+            <td>Economy</td>
+            <td><span class="badge badge-pending">Pending</span></td>
+          </tr>
+          <tr>
+            <td class="font-medium text-navy">Passenger 3</td>
+            <td>QR-611</td>
+            <td>ISB &rarr; DOH</td>
+            <td>Economy</td>
+            <td><span class="badge badge-confirmed">Confirmed</span></td>
+          </tr>
+          <tr>
+            <td class="font-medium text-navy">Passenger 4</td>
+            <td>PK-786</td>
+            <td>ISB &rarr; LHE</td>
+            <td>Economy</td>
+            <td><span class="badge badge-cancelled">Cancelled</span></td>
+          </tr>
+          <tr>
+            <td class="font-medium text-navy">Passenger 5</td>
+            <td>TK-716</td>
+            <td>ISB &rarr; IST</td>
+            <td>Business</td>
+            <td><span class="badge badge-confirmed">Confirmed</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <footer class="site-footer mt-auto">
+    <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <div class="flex items-center gap-2 mb-3">
+          <i class="fa-solid fa-plane-up text-sky-400 text-xl"></i>
+          <span class="font-display text-white text-lg font-semibold">FlyHigh</span>
+        </div>
+        <p class="text-sm text-sky-200/80 leading-relaxed">Internal operations console for managing tickets, gates and flight movements across the network.</p>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-3 text-sm">Navigate</p>
+        <ul class="flex flex-col gap-2 text-sm">
+          <li><a href="index.html">Home Dashboard</a></li>
+          <li><a href="tickets.html">Ticket Management</a></li>
+          <li><a href="departures.html">Departures</a></li>
+          <li><a href="arrivals.html">Arrivals</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-3 text-sm">Operations</p>
+        <ul class="flex flex-col gap-2 text-sm">
+          <li><a href="#">Gate Allocation</a></li>
+          <li><a href="#">Crew Scheduling</a></li>
+          <li><a href="#">Baggage Tracking</a></li>
+          <li><a href="#">Reports</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-3 text-sm">Contact</p>
+        <p class="text-sm text-sky-200/80">Ops Desk, Islamabad International Airport</p>
+        <p class="text-sm text-sky-200/80 mt-1">ops@flyhighairways.com</p>
+        <div class="flex gap-3 mt-4">
+          <a href="#" class="footer-social"><i class="fa-brands fa-twitter text-sm"></i></a>
+          <a href="#" class="footer-social"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+          <a href="#" class="footer-social"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10 py-4 text-center text-xs text-sky-200/70">
+      &copy; 2026 FlyHigh Airways. Built for Task 2 submission.
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FlyHigh Airways | Welcome</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/tailwind.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white">
+
+<header class="flex items-center justify-between px-6 sm:px-10 py-6">
+  <div class="flex items-center gap-3">
+    <div class="w-10 h-10 rounded-xl bg-sky-500 flex items-center justify-center">
+      <i class="fa-solid fa-plane-up text-white text-lg"></i>
+    </div>
+    <span class="font-display text-navy text-lg font-semibold">FlyHigh Airways</span>
+  </div>
+  <a href="index.html" class="btn-primary px-5 py-2.5 rounded-lg text-sm font-medium">
+    Enter Dashboard
+  </a>
+</header>
+
+<main class="flex flex-col items-center justify-center text-center px-6 py-16 sm:py-24">
+  <span class="inline-flex items-center gap-2 bg-sky-50 text-sky-600 text-xs font-medium px-4 py-1.5 rounded-full mb-6">
+    <i class="fa-solid fa-tower-broadcast"></i> Airline Operations Console
+  </span>
+
+  <h1 class="font-display text-4xl sm:text-5xl font-semibold text-navy max-w-2xl leading-tight">
+    Manage flights, tickets and gates from one place
+  </h1>
+
+  <p class="text-slate-500 max-w-xl mt-5 text-base sm:text-lg">
+    FlyHigh Airways keeps ticketing, departures and arrivals in sync for your ground team, in one clean dashboard.
+  </p>
+
+  <a href="index.html" class="btn-primary inline-flex items-center gap-2 px-7 py-3.5 rounded-lg text-sm font-medium mt-9">
+    Go to Dashboard <i class="fa-solid fa-arrow-right"></i>
+  </a>
+
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-3xl w-full mt-20">
+    <div class="stat-card p-6 text-left">
+      <div class="stat-icon bg-sky-100 text-sky-600 mb-4"><i class="fa-solid fa-ticket text-lg"></i></div>
+      <p class="font-display text-navy font-semibold">Ticket Management</p>
+      <p class="text-sm text-slate-500 mt-1">Search, issue and track passenger bookings.</p>
+    </div>
+    <div class="stat-card p-6 text-left">
+      <div class="stat-icon bg-emerald-100 text-emerald-600 mb-4"><i class="fa-solid fa-plane-departure text-lg"></i></div>
+      <p class="font-display text-navy font-semibold">Departures</p>
+      <p class="text-sm text-slate-500 mt-1">Live gate and status updates for outbound flights.</p>
+    </div>
+    <div class="stat-card p-6 text-left">
+      <div class="stat-icon bg-amber-100 text-amber-600 mb-4"><i class="fa-solid fa-plane-arrival text-lg"></i></div>
+      <p class="font-display text-navy font-semibold">Arrivals</p>
+      <p class="text-sm text-slate-500 mt-1">Track incoming flights and baggage claim info.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="text-center text-xs text-slate-400 py-8 border-t border-sky-50">
+  &copy; 2026 FlyHigh Airways. Built for Task 2 submission.
+</footer>
+
+</body>
+</html>
