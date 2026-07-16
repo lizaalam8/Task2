@@ -231,6 +231,176 @@
       </div>
     </section>
 
+    <!-- Book Ticket Section -->
+<section class="panel p-5 mt-6" id="book-ticket">
+  <div class="flex items-center justify-between mb-5">
+    <div>
+      <h2 class="font-display text-lg font-semibold text-navy">Book Your Ticket</h2>
+      <p class="text-sm text-slate-500">Search and book a flight from anywhere to anywhere</p>
+    </div>
+    <div class="stat-icon bg-sky-100 text-sky-600"><i class="fa-solid fa-paper-plane text-lg"></i></div>
+  </div>
+
+  <form class="booking-form">
+
+    <!-- Trip type -->
+    <div class="trip-type-row">
+      <label class="trip-radio">
+        <input type="radio" name="trip-type" checked>
+        <span>One Way</span>
+      </label>
+      <label class="trip-radio">
+        <input type="radio" name="trip-type">
+        <span>Round Trip</span>
+      </label>
+      <label class="trip-radio">
+        <input type="radio" name="trip-type">
+        <span>Multi City</span>
+      </label>
+    </div>
+
+    <!-- From / Swap / To -->
+    <div class="route-row">
+      <div class="form-field">
+        <label for="from">From</label>
+        <div class="input-icon-wrap">
+          <i class="fa-solid fa-plane-departure"></i>
+          <input type="text" id="from" placeholder="Islamabad (ISB)" required>
+        </div>
+      </div>
+
+      <button type="button" class="swap-btn" title="Swap locations">
+        <i class="fa-solid fa-right-left"></i>
+      </button>
+
+      <div class="form-field">
+        <label for="to">To</label>
+        <div class="input-icon-wrap">
+          <i class="fa-solid fa-plane-arrival"></i>
+          <input type="text" id="to" placeholder="Dubai (DXB)" required>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dates / Passengers / Class -->
+    <div class="form-grid">
+      <div class="form-field">
+        <label for="depart-date">Departure Date</label>
+        <div class="input-icon-wrap">
+          <i class="fa-solid fa-calendar-days"></i>
+          <input type="date" id="depart-date" required>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="return-date">Return Date</label>
+        <div class="input-icon-wrap">
+          <i class="fa-solid fa-calendar-days"></i>
+          <input type="date" id="return-date">
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="passengers">Passengers</label>
+        <div class="input-icon-wrap">
+          <i class="fa-solid fa-user-group"></i>
+          <select id="passengers">
+            <option>1 Adult</option>
+            <option>2 Adults</option>
+            <option>3 Adults</option>
+            <option>2 Adults, 1 Child</option>
+            <option>4+ Passengers</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="class">Class</label>
+        <div class="input-icon-wrap">
+          <i class="fa-solid fa-chair"></i>
+          <select id="class">
+            <option>Economy</option>
+            <option>Premium Economy</option>
+            <option>Business</option>
+            <option>First Class</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <hr class="form-divider">
+
+    <!-- Passenger details -->
+    <p class="form-subheading">Passenger Details</p>
+    <div class="form-grid">
+      <div class="form-field">
+        <label for="full-name">Full Name</label>
+        <div class="input-icon-wrap">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" id="full-name" placeholder="As per CNIC / Passport" required>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="cnic">CNIC / Passport No.</label>
+        <div class="input-icon-wrap">
+          <i class="fa-solid fa-id-card"></i>
+          <input type="text" id="cnic" placeholder="XXXXX-XXXXXXX-X" required>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="email">Email Address</label>
+        <div class="input-icon-wrap">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" id="email" placeholder="you@example.com" required>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="phone">Phone Number</label>
+        <div class="input-icon-wrap">
+          <i class="fa-solid fa-phone"></i>
+          <input type="tel" id="phone" placeholder="03XX-XXXXXXX" required>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seat preference -->
+    <div class="seat-pref-row">
+      <p class="form-subheading mb-0">Seat Preference</p>
+      <div class="seat-options">
+        <label class="seat-chip">
+          <input type="radio" name="seat-pref" checked>
+          <span><i class="fa-solid fa-border-none"></i> Window</span>
+        </label>
+        <label class="seat-chip">
+          <input type="radio" name="seat-pref">
+          <span><i class="fa-solid fa-chair"></i> Aisle</span>
+        </label>
+        <label class="seat-chip">
+          <input type="radio" name="seat-pref">
+          <span><i class="fa-solid fa-shuffle"></i> No Preference</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Summary + submit -->
+    <div class="booking-footer">
+      <div class="fare-summary">
+        <span class="fare-label">Estimated Fare</span>
+        <span class="fare-amount">PKR 58,900</span>
+      </div>
+      <div class="booking-actions">
+        <button type="reset" class="btn-secondary">Clear Form</button>
+        <button type="submit" class="btn-primary">
+          <i class="fa-solid fa-ticket"></i> Confirm Booking
+        </button>
+      </div>
+    </div>
+
+  </form>
+</section>
   </main>
 
   <footer class="site-footer mt-auto">

@@ -274,3 +274,351 @@ body {
 .btn-primary:hover {
   background: var(--sky-dark);
 }
+
+/* Meal grid */
+.meal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.meal-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: #ffffff;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.meal-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+.meal-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}
+
+.meal-card-body {
+  padding: 1rem 1.1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.meal-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #0f2a4a;
+  margin-bottom: 0.25rem;
+}
+
+.meal-desc {
+  font-size: 0.8rem;
+  color: #64748b;
+  line-height: 1.4;
+  margin-bottom: 0.9rem;
+  flex: 1;
+}
+
+.meal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.meal-price {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #0284c7;
+}
+
+.order-btn {
+  background: #0ea5e9;
+  color: #ffffff;
+  border: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.order-btn:hover {
+  background: #0284c7;
+}
+
+.order-btn:active {
+  transform: scale(0.97);
+}
+
+/* Booking form */
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.trip-type-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.trip-radio {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: #475569;
+  cursor: pointer;
+}
+
+.trip-radio input {
+  accent-color: #0ea5e9;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* Route row */
+.route-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 0.75rem;
+  align-items: end;
+}
+
+.swap-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #e2e8f0;
+  background: #f0f9ff;
+  color: #0ea5e9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  margin-bottom: 2px;
+}
+
+.swap-btn:hover {
+  background: #0ea5e9;
+  color: #ffffff;
+  transform: rotate(180deg);
+}
+
+/* Generic field grid */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-field label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #0f2a4a;
+}
+
+.input-icon-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.6rem;
+  padding: 0.55rem 0.8rem;
+  background: #f8fafc;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-icon-wrap:focus-within {
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
+  background: #ffffff;
+}
+
+.input-icon-wrap i {
+  color: #0ea5e9;
+  font-size: 0.85rem;
+  width: 16px;
+  text-align: center;
+}
+
+.input-icon-wrap input,
+.input-icon-wrap select {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.85rem;
+  color: #0f2a4a;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+}
+
+.form-divider {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 0.25rem 0;
+}
+
+.form-subheading {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #0f2a4a;
+  margin-bottom: 0.5rem;
+}
+
+/* Seat preference */
+.seat-pref-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.seat-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.seat-chip {
+  cursor: pointer;
+}
+
+.seat-chip input {
+  display: none;
+}
+
+.seat-chip span {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
+
+.seat-chip input:checked + span {
+  background: #0ea5e9;
+  border-color: #0ea5e9;
+  color: #ffffff;
+}
+
+/* Footer: fare + actions */
+.booking-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.fare-summary {
+  display: flex;
+  flex-direction: column;
+}
+
+.fare-label {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.fare-amount {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: #0284c7;
+}
+
+.booking-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn-secondary {
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  padding: 0.6rem 1.1rem;
+  border-radius: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: #e2e8f0;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .route-row {
+    grid-template-columns: 1fr;
+  }
+  .swap-btn {
+    justify-self: center;
+    transform: rotate(90deg);
+  }
+  .swap-btn:hover {
+    transform: rotate(270deg);
+  }
+  .booking-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Blurred background image for Welcome page */
+.page-bg {
+  position: relative;
+  min-height: 100vh;
+}
+
+.page-bg::before {
+  content: "";
+  position: fixed;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background-image: url('https://plus.unsplash.com/premium_vector-1718388092752-9a512ba52404?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(6px);
+  transform: scale(1.05);
+  z-index: -2;
+}
+
+.page-bg::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.55);
+  z-index: -1;
+}
